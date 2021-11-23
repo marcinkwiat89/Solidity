@@ -2,7 +2,7 @@
 
 pragma solidity 0.6.12;
 
-contract ExeptionExample {
+contract ExceptionExample {
     mapping(address => uint64) public balanceReceived;
     
     function receiveMoney() public payable {
