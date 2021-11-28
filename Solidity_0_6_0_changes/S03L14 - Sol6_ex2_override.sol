@@ -15,7 +15,7 @@ pragma solidity >=0.5.15 <=0.6.0;
  * Works in Solidity 0.5.15
  * 
  * *
-
+/**
 contract A {
     event MyEvent(string _myString);
     function funA() public {
@@ -35,7 +35,7 @@ contract C is B,A {
         super.funA();
     }
 }
-/**/
+
 
 
 
@@ -56,8 +56,8 @@ contract B {
     }
 }
 
-contract C is A,B {
-    function funA() public override(B,A) {
+contract C is A,B { //this order is important
+    function funA() public override(B,A) { //here it doesn't matter the order
         emit MyEvent("from B");
         super.funA();
     }

@@ -15,17 +15,17 @@ pragma solidity >=0.5.15 <=0.6.0;
  * *
 contract MyContract {
     uint[] public myUintArray;
-    
+    //to add new element it was possible just to extend length and put value at the end of array
     function add(uint _num) public {
         myUintArray.length++;
         myUintArray[myUintArray.length - 1] = _num;
     }
-    
+    //to delete it was possible just to decrease lentgh of an array
     function removeElement() public {
         myUintArray.length--;
     }
 }
-/* */
+/* *
 
 /**
  * works in 0.5.15 AND 0.6.0

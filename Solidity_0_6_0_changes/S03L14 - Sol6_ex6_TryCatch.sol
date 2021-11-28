@@ -27,13 +27,13 @@ contract B {
     function testRequireTryCatch() public returns(bool) {
         try instA.funCAssertFailure() {
             return true;
-        } catch Error(string memory reason) {
+        } catch Error(string memory reason) { // funARequireFailure and funBRevertFailure
             // This is executed in case
             // revert was called inside getData
             // and a reason string was provided.
             emit Error(reason);
             return false;
-        } catch (bytes memory lowLevelData) {
+        } catch (bytes memory lowLevelData) { // funCAssertFailure
             // This is executed in case revert() was used
             // or there was a failing assertion, division
             // by zero, etc. inside getData.
