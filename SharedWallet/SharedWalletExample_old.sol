@@ -1,6 +1,7 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity 0.6.1; //In a recent update of Solidity the Integer type variables cannot overflow anymore.
+//pragma solidity 0.6.1; compiler version must be at least 0.8.0, because OpenZeppelin uses this
+pragma solidity ^0.8.0; //In a recent update of Solidity the Integer type variables cannot overflow anymore.
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/contracts/math/SafeMath.sol";
